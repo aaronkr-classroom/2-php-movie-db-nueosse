@@ -33,5 +33,5 @@ if (isset($_FILES['poster'])) {
 
 mysqli_close($db);
 
-echo "<script>location.href='main.php';</script>";
+echo "<script>location.replace('index.php');</script>";
 ?>

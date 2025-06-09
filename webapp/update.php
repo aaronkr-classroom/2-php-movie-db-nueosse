@@ -3,7 +3,7 @@
 $db = mysqli_connect("localhost", "movie_user", "1234", "movieDB")
     or die("movieDB 데이터베이스 접속 실패!");
 
-$stitle = $_POST["stitle"];
+$title = $_POST["stitle"];
 
 $sql = "SELECT * FROM movie WHERE title='".$title."';";
 $result = mysqli_query($db, $sql);
@@ -11,7 +11,7 @@ $result = mysqli_query($db, $sql);
 if ($result) {
     $count = mysqli_num_rows($result);
     if ($count == 0) {
-        echo "<script>alert(해당 정보가 없습니다!);location.replace('main.php');</script>";
+        echo "<script>alert(해당 정보가 없습니다!);location.replace('index.php');</script>";
     }
 } else {
     $err_msg = mysqli_error($db);
@@ -58,12 +58,12 @@ mysqli_close($db);
             </header>
 
             <article data-role="content">
-                <form name="form1" method="POST" enctype="multipart/form-data" action="insert_result.php" data-ajax="false">
-                    <h3>영화 정보 입력</h3>
+                <h3>영화 정보 수정</h3>
+                <form name="form2" method="POST" action="update_result.php" data-ajax="false">
                     <div class="ui-body ui-body-a">
                         <label>장르: </label>
                         <select name="genre" data-native-menu="false" data-mini="true" data-inline="true" id="genre">
-                            <option value="미정">미정</option>
+                            <option value="<?php echo $genre; ?>"><? echo $genre; ?></option>
                             <option value="액션">액션</option>
                             <option value="코미디">코미디</option>
                             <option value="로맨스">로맨스</option>
@@ -77,19 +77,17 @@ mysqli_close($db);
                             <option value="기타">기타</option>
                         </select>
                         <label>영화명: </label>
-                        <input type="text" name="title" id="title" data-mini="true" data-inline="true">
+                        <input type="text" name="title" id="title" value="<?php echo $title; ?>" data-mini="true" data-inline="true">
                         <label>상영날짜 (yyyy-mm-dd): </label>
-                        <input type="date" name="date" id="date" data-mini="true" data-inline="true">
+                        <input type="date" name="date" id="date" value="<?php echo $date; ?>" data-mini="true" data-inline="true">
                         <label>관람료: </label>
-                        <input type="number" name="price" id="price" data-mini="true" data-inline="true">
-                        <label>포스터: </label>
-                        <input type="file" name="poster" id="poster" data-mini="true" data-inline="true">
+                        <input type="number" name="price" id="price" value="<?php echo $price; ?>" data-mini="true" data-inline="true">
                     </div>
 
                     <div class="ui-body">
                         <fieldset class="ui-grid-a">
                             <div class="ui-block-a">
-                                <input type="submit" value="추가" data-mini="true">
+                                <input type="submit" value="수정" data-mini="true">
                             </div>
                             <div class="ui-block-b">
                                 <input type="reset" value="취소" data-mini="true">
