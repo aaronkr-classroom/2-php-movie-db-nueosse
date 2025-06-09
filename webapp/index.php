@@ -21,10 +21,10 @@
             <article data-role="content">
                 <img style="margin: 20px auto; display: block;" src="img/cinema.jpg" />
                 <ul data-role="listview" data-inset="true">
-                    <li><a href="insert.php">영화 정보 추가</a></li>
-                    <li><a href="update_select.php">영화 정보 수정</a></li>
-                    <li><a href="delete_select.php">영화 정보 삭제</a></li>
-                    <li><a href="select_all.php">전체 영화 조회</a></li>
+                    <li><a href="./insert.php">영화 정보 추가</a></li>
+                    <li><a href="./update_select.php">영화 정보 수정</a></li>
+                    <li><a href="./delete_select.php">영화 정보 삭제</a></li>
+                    <li><a href="./select_all.php">전체 영화 조회</a></li>
                 </ul>
             </article>
 

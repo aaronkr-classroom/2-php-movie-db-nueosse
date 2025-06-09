@@ -45,14 +45,14 @@ mysqli_close($db);
             <header data-role="header" data-position="fixed" data-theme="b">
                 <a href="#" data-icon="back" data-rel="back">&larr; 뒤로 (Back)</a>
                 <h1>영화 정보 수정</h1>
-                <a href="index.php" data-icon="home" data-iconpos="notext" class="ui-btn-right">영화 목록 (Home)</a>
+                <a href="./index.php" data-icon="home" data-iconpos="notext" class="ui-btn-right">영화 목록 (Home)</a>
 
                 <nav data-role="navbar">
                     <ul>
-                        <li><a href="insert.php">입력</a></li>
-                        <li><a href="update_select.php" class="ui-btn-active">수정</a></li>
-                        <li><a href="delete_select.php">삭제</a></li>
-                        <li><a href="select_all.php">전체 조회</a></li>
+                        <li><a href="./insert.php">입력</a></li>
+                        <li><a href="./update_select.php" class="ui-btn-active">수정</a></li>
+                        <li><a href="./delete_select.php">삭제</a></li>
+                        <li><a href="./select_all.php">전체 조회</a></li>
                     </ul>
                 </nav>
             </header>
