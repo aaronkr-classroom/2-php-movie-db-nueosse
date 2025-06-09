@@ -1,5 +1,5 @@
 <?php
-// movieDB 데이터베이스 접속
+// movieDB 데이터베이스 접속 
 $db = mysqli_connect("localhost", "movie_user", "1234", "movieDB")
     or die("movieDB 데이터베이스 접속 실패!");
 

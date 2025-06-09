@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html>
-    <head><!-- 페이지 정보 -->
+    <head><!--  페이지 정보 -->
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <!-- 제이쿼리 모바일 라이브러리 추가 -->
